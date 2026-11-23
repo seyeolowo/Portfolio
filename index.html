@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seye Olowookere, CFA, CPA · AI Finance Leader</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --forest:#0B3D2C; --deep:#072A1F; --emerald:#1D7A52; --leaf:#3FA672; --mint:#CFEBDB; --mist:#EAF5EE;
+  --paper:#FBFCF8; --white:#fff; --ink:#0F1F19; --muted:#5D6F66; --line:#DCE7E0;
+  --serif:"Instrument Serif",Georgia,serif; --sans:"Inter Tight",system-ui,sans-serif; --mono:"JetBrains Mono",ui-monospace,monospace;
+  --r:22px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--paper);color:var(--ink);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{width:min(1200px,92vw);margin:0 auto}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--emerald);display:inline-flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:28px;height:1px;background:currentColor}
+h1,h2,h3{font-family:var(--serif);font-weight:400;letter-spacing:-.01em;line-height:1.02}
+em{font-style:italic;color:var(--emerald)}
+
+/* nav */
+nav{position:fixed;inset:16px 0 auto;z-index:50;display:flex;justify-content:center;pointer-events:none}
+.navin{pointer-events:auto;display:flex;align-items:center;gap:6px;padding:6px 6px 6px 18px;border-radius:999px;background:rgba(251,252,248,.72);backdrop-filter:blur(16px) saturate(1.4);-webkit-backdrop-filter:blur(16px) saturate(1.4);border:1px solid rgba(11,61,44,.1);box-shadow:0 8px 30px -12px rgba(7,42,31,.25)}
+.logo{font-family:var(--serif);font-size:22px;margin-right:14px;text-decoration:none}
+.logo span{color:var(--emerald)}
+.navin a.l{font-size:14px;text-decoration:none;padding:8px 14px;border-radius:999px;color:var(--muted);transition:.25s}
+.navin a.l:hover{color:var(--forest);background:var(--mist)}
+.navin a.cta{font-size:14px;text-decoration:none;padding:9px 18px;border-radius:999px;background:var(--forest);color:#fff;transition:.25s}
+.navin a.cta:hover{background:var(--emerald)}
+
+/* hero */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:130px 0 80px;overflow:hidden}
+.blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.55;z-index:0}
+.b1{width:520px;height:520px;background:var(--mint);top:-120px;right:-80px}
+.b2{width:380px;height:380px;background:#E3F3D9;bottom:-60px;left:-120px}
+.grid-bg{position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(ellipse at 60% 40%,#000 10%,transparent 70%);-webkit-mask-image:radial-gradient(ellipse at 60% 40%,#000 10%,transparent 70%);opacity:.6;z-index:0}
+.hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1.25fr .9fr;gap:60px;align-items:center}
+.hero h1{font-size:clamp(54px,8vw,112px);margin:22px 0 26px}
+.hero h1 .thin{display:block;font-size:.4em;color:var(--muted);margin-top:10px}
+.lede{font-size:20px;color:var(--muted);max-width:560px;font-weight:300}
+.lede b{color:var(--ink);font-weight:500}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:30px 0 36px}
+.chip{font-family:var(--mono);font-size:12px;padding:7px 13px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.7)}
+.chip.g{background:var(--forest);color:#fff;border-color:var(--forest)}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 26px;border-radius:999px;text-decoration:none;font-weight:500;font-size:15px;transition:.3s}
+.btn.p{background:var(--forest);color:#fff}
+.btn.p:hover{background:var(--emerald);transform:translateY(-2px)}
+.btn.s{border:1px solid var(--forest);color:var(--forest)}
+.btn.s:hover{background:var(--forest);color:#fff}
+.btn svg{width:16px;height:16px;transition:.3s}
+.btn:hover svg{transform:translateX(3px)}
+
+.portrait{position:relative;justify-self:center;width:min(420px,80vw)}
+.arch{position:relative;aspect-ratio:4/5;border-radius:999px 999px 28px 28px;overflow:hidden;background:var(--mint);box-shadow:0 40px 80px -30px rgba(7,42,31,.45)}
+.arch img{width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+.arch::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 60%,rgba(11,61,44,.35))}
+.ring{position:absolute;inset:-18px;border:1px solid var(--leaf);border-radius:999px 999px 40px 40px;opacity:.5}
+.badge{position:absolute;background:#fff;border-radius:18px;padding:14px 18px;box-shadow:0 18px 40px -16px rgba(7,42,31,.35);border:1px solid var(--line);animation:float 6s ease-in-out infinite}
+.badge .n{font-family:var(--serif);font-size:38px;line-height:1;color:var(--forest)}
+.badge .t{font-size:12px;color:var(--muted);line-height:1.3;margin-top:4px}
+.badge.one{left:-46px;bottom:70px}
+.badge.two{right:-34px;top:70px;animation-delay:-3s;display:flex;align-items:center;gap:10px}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--leaf);box-shadow:0 0 0 0 rgba(63,166,114,.6);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 12px rgba(63,166,114,0)}100%{box-shadow:0 0 0 0 rgba(63,166,114,0)}}
+@keyframes float{50%{transform:translateY(-10px)}}
+
+/* marquee */
+.marquee{background:var(--forest);color:var(--mint);overflow:hidden;padding:22px 0;border-block:1px solid var(--deep)}
+.track{display:flex;gap:48px;width:max-content;animation:scroll 40s linear infinite}
+.track span{font-family:var(--serif);font-size:30px;white-space:nowrap;display:flex;align-items:center;gap:48px}
+.track span::after{content:"✦";font-size:16px;color:var(--leaf)}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+section{padding:130px 0}
+.head{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:60px;flex-wrap:wrap}
+.head h2{font-size:clamp(42px,5.5vw,76px);margin-top:16px;max-width:760px}
+.head p{color:var(--muted);max-width:380px}
+
+/* about */
+.about .wrap.solo{display:block}
+.about .wrap{display:grid;grid-template-columns:1fr 1.3fr;gap:80px}
+  
+.about h2{font-size:clamp(40px,4.6vw,64px);margin-top:16px}
+.about .copy p{font-size:19px;color:#2B3B34;margin-bottom:22px;font-weight:300}
+.about .copy p:first-child{font-family:var(--serif);font-size:30px;line-height:1.25;color:var(--forest)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;margin-top:70px}
+.stat{background:var(--white);padding:30px 26px}
+.stat .n{font-family:var(--serif);font-size:56px;line-height:1;color:var(--forest)}
+.stat .n sup{font-size:.45em;color:var(--leaf)}
+.stat .t{font-size:14px;color:var(--muted);margin-top:10px}
+
+/* experience */
+.exp{background:var(--white);border-block:1px solid var(--line)}
+.roles{border-top:1px solid var(--line)}
+.role{display:grid;grid-template-columns:80px 1.1fr 1.4fr 140px;gap:30px;align-items:start;padding:38px 10px;border-bottom:1px solid var(--line);transition:.35s;position:relative}
+.role:hover{background:var(--mist);padding-left:24px}
+.role .i{font-family:var(--mono);font-size:13px;color:var(--leaf);padding-top:12px}
+.role h3{font-size:38px}
+.role .p{color:var(--muted);padding-top:6px}
+.role .y{justify-self:end;font-family:var(--mono);font-size:13px;padding:6px 12px;border-radius:999px;background:var(--mist);color:var(--forest);margin-top:8px;white-space:nowrap}
+
+/* work */
+.tabs{display:inline-flex;padding:5px;border-radius:999px;background:var(--mist);border:1px solid var(--line);gap:4px}
+.tab{border:0;background:transparent;font:500 14px var(--sans);padding:10px 20px;border-radius:999px;cursor:pointer;color:var(--muted);transition:.25s}
+.tab .c{font-family:var(--mono);font-size:11px;opacity:.6;margin-left:6px}
+.tab.on{background:var(--forest);color:#fff}
+.cards{display:grid;grid-template-columns:repeat(12,1fr);gap:22px}
+.card{grid-column:span 4;background:var(--white);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;cursor:pointer;display:flex;flex-direction:column;transition:transform .45s cubic-bezier(.2,.7,.2,1),box-shadow .45s,border-color .3s}
+.card.wide{grid-column:span 6}
+.card:hover{transform:translateY(-6px);box-shadow:0 30px 60px -30px rgba(7,42,31,.35);border-color:var(--mint)}
+.card.hide{display:none}
+.card.full{grid-column:span 12;flex-direction:row}
+.card.full .shot{flex:1.6;aspect-ratio:auto;min-height:420px;border-bottom:0;border-right:1px solid var(--line)}
+.card.full .body{flex:1;justify-content:center;padding:44px}
+.card.full h3{font-size:44px}
+.shot{position:relative;aspect-ratio:16/10;overflow:hidden;background:var(--mist);border-bottom:1px solid var(--line)}
+.shot img{width:100%;height:100%;object-fit:cover;object-position:top center;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.card:hover .shot img{transform:scale(1.045)}
+.shot .tag{position:absolute;top:14px;left:14px;font-family:var(--mono);font-size:11px;padding:5px 10px;border-radius:999px;background:rgba(255,255,255,.92);color:var(--forest);border:1px solid var(--line)}
+.shot .open{position:absolute;right:14px;bottom:14px;width:42px;height:42px;border-radius:50%;background:var(--forest);color:#fff;display:grid;place-items:center;opacity:0;transform:scale(.8);transition:.35s}
+.card:hover .open{opacity:1;transform:none}
+.body{padding:24px 26px 28px;display:flex;flex-direction:column;gap:12px;flex:1}
+.body .num{font-family:var(--mono);font-size:12px;color:var(--leaf)}
+.body h3{font-size:30px}
+.body p{font-size:15px;color:var(--muted);line-height:1.55}
+.tools{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:8px}
+.tools span{font-size:12px;padding:4px 10px;border-radius:999px;background:var(--mist);color:var(--forest)}
+.note{margin-top:34px;font-size:13px;color:var(--muted);font-family:var(--mono)}
+
+/* approach */
+.approach{background:var(--forest);color:#E6F2EB;position:relative;overflow:hidden}
+.approach .eyebrow{color:var(--leaf)}
+.approach h2{color:#fff}
+.approach h2 em{color:var(--mint)}
+.approach .head p{color:#A9C9B8}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.step{border:1px solid rgba(207,235,219,.16);border-radius:var(--r);padding:30px 26px;background:rgba(255,255,255,.03);transition:.35s}
+.step:hover{background:rgba(255,255,255,.07);transform:translateY(-4px)}
+.step .k{font-family:var(--mono);font-size:12px;color:var(--leaf)}
+.step h3{font-size:32px;color:#fff;margin:40px 0 12px}
+.step p{font-size:15px;color:#A9C9B8}
+.approach .ring2{position:absolute;width:700px;height:700px;border:1px solid rgba(207,235,219,.08);border-radius:50%;right:-250px;top:-250px}
+
+/* contact */
+.contact{text-align:center;padding:150px 0 110px}
+.contact h2{font-size:clamp(52px,8vw,120px);margin:20px auto 30px;max-width:1000px}
+.contact p{color:var(--muted);max-width:540px;margin:0 auto 40px;font-size:19px}
+footer{border-top:1px solid var(--line);padding:30px 0;font-size:13px;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:100;background:rgba(7,42,31,.86);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);display:none;opacity:0;transition:opacity .3s}
+.lb.on{display:flex;opacity:1}
+.lbin{margin:auto;width:min(1180px,94vw);height:92vh;background:var(--paper);border-radius:24px;overflow:hidden;display:grid;grid-template-columns:1fr 340px}
+.lbimg{overflow:auto;background:var(--mist);padding:20px}
+.lbimg img{width:100%;border-radius:10px;border:1px solid var(--line);margin-bottom:16px;background:#fff}
+.lbside{padding:34px 30px;display:flex;flex-direction:column;gap:14px;border-left:1px solid var(--line);overflow:auto}
+.lbside h3{font-size:32px}
+.lbside p{color:var(--muted);font-size:15px}
+.lbnav{margin-top:auto;display:flex;gap:8px}
+.ib{width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:#fff;cursor:pointer;display:grid;place-items:center;transition:.25s;color:var(--forest)}
+.ib:hover{background:var(--forest);color:#fff;border-color:var(--forest)}
+.ib svg{width:18px;height:18px}
+.close{position:absolute;top:22px;right:22px}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(28px);transition:opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+
+@media (max-width:980px){
+  .hero .wrap,.about .wrap{grid-template-columns:1fr}
+  .portrait{order:-1;width:min(320px,70vw)}
+  .badge.one{left:-20px}.badge.two{right:-14px}
+  .card,.card.wide{grid-column:span 6}
+  .card.full{flex-direction:column}.card.full .shot{min-height:0;aspect-ratio:16/10;border-right:0;border-bottom:1px solid var(--line)}
+  .steps{grid-template-columns:1fr 1fr}
+  .stats{grid-template-columns:1fr 1fr}
+  .role{grid-template-columns:50px 1fr;gap:10px 20px}
+  .role .p{grid-column:2}.role .y{grid-column:2;justify-self:start;margin:0}
+  .lbin{grid-template-columns:1fr;grid-template-rows:1fr auto}
+  .lbside{border-left:0;border-top:1px solid var(--line);max-height:38vh;padding:22px}
+  .navin a.l{display:none}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  section{padding:90px 0}
+  .card,.card.wide,.card.full{grid-column:span 12}
+  .steps{grid-template-columns:1fr}
+  .badge,.badge.two{display:none}
+  .about .copy p:first-child{font-size:23px}
+}
+</style>
+</head>
+<body>
+
+<nav><div class="navin">
+  <a href="#top" class="logo">Seye<span>.</span></a>
+  <a class="l" href="#about">About</a>
+  <a class="l" href="#experience">Experience</a>
+  <a class="l" href="#work">Work</a>
+  <a class="l" href="#approach">Approach</a>
+  <a class="cta" href="#contact">Get in touch</a>
+</div></nav>
+
+<header class="hero" id="top">
+  <div class="blob b1"></div><div class="blob b2"></div><div class="grid-bg"></div>
+  <div class="wrap">
+    <div>
+      <span class="eyebrow rv">AI Finance Leader · Board Member</span>
+      <h1 class="rv">Finance that <em>thinks</em> ahead.<span class="thin">Julius Seye Olowookere, CFA, CPA</span></h1>
+      <p class="lede rv">I build the tools that turn financial and investment data into <b>clear, confident decisions</b>, across FP&amp;A, portfolio analytics and financial reporting, increasingly powered by AI.</p>
+      <div class="chips rv">
+        <span class="chip g">CFA Charterholder</span><span class="chip g">CPA</span>
+        <span class="chip">Investment Management</span><span class="chip">FP&amp;A</span><span class="chip">Portfolio Analytics</span><span class="chip">AI Automation</span>
+      </div>
+      <div class="btns rv">
+        <a class="btn p" href="#work">View selected work <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn s" href="https://www.linkedin.com/in/seyeolowookere/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <div class="portrait rv">
+      <div class="ring"></div>
+      <div class="arch"><img src="img/portrait.jpg" alt="Portrait of Seye Olowookere"></div>
+      <div class="badge one"><div class="n">13+</div><div class="t">years in finance &amp;<br>investment management</div></div>
+      <div class="badge two"><span class="dot"></span><div class="t" style="margin:0;color:var(--ink);font-weight:500">Automating finance<br>with AI</div></div>
+    </div>
+  </div>
+</header>
+
+<div class="marquee" aria-hidden="true"><div class="track">
+  <span>Investment Management</span><span>FP&amp;A</span><span>Portfolio Analytics</span><span>Financial Reporting</span><span>AI Agents</span><span>Forecasting</span><span>Climate Disclosure</span><span>Decision Intelligence</span>
+  <span>Investment Management</span><span>FP&amp;A</span><span>Portfolio Analytics</span><span>Financial Reporting</span><span>AI Agents</span><span>Forecasting</span><span>Climate Disclosure</span><span>Decision Intelligence</span>
+</div></div>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="rv">
+      <span class="eyebrow">About</span>
+      <h2>Numbers are the start. <em>Decisions</em> are the point.</h2>
+    </div>
+    <div class="copy rv">
+      <p>I'm a CFA charterholder and CPA with more than 13 years across FP&amp;A, financial reporting and institutional investment management, in insurance, banking and SaaS.</p>
+      <p>For over six years at Serenia Life Financial, I've worked on investment management, performance reporting, financial reporting and climate disclosure for a portfolio of insurance-backed assets. Before that, I handled FP&amp;A and financial reporting at General Electric Canada, and began my career at First Bank in FP&amp;A, performance reporting and product management.</p>
+      <p>Across every role, the thread is the same: I build tools that make reporting faster and help leaders decide with confidence.</p>
+    </div>
+  </div>
+  <div class="wrap solo">
+    <div class="stats rv">
+      <div class="stat"><div class="n">13<sup>+</sup></div><div class="t">Years in FP&amp;A, reporting and investment management</div></div>
+      <div class="stat"><div class="n">3</div><div class="t">Industries: insurance, banking and SaaS</div></div>
+      <div class="stat"><div class="n">16</div><div class="t">Dashboards, agents and workflows in this portfolio</div></div>
+      <div class="stat"><div class="n">2</div><div class="t">Designations: CFA charter and CPA</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="exp" id="experience">
+  <div class="wrap">
+    <div class="head rv">
+      <div><span class="eyebrow">Experience</span><h2>Three institutions, <em>one</em> through-line.</h2></div>
+      <p>From banking to industrial SaaS to life insurance, always at the point where data becomes a decision.</p>
+    </div>
+    <div class="roles">
+      <div class="role rv"><span class="i">01</span><h3>Serenia Life Financial</h3><p class="p">FP&amp;A, investment management and investment reporting for a life insurer, along with financial reporting and sustainability and climate disclosure.</p><span class="y">6+ years</span></div>
+      <div class="role rv"><span class="i">02</span><h3>General Electric Canada</h3><p class="p">FP&amp;A and financial reporting for SaaS and manufacturing businesses.</p><span class="y">1+ year</span></div>
+      <div class="role rv"><span class="i">03</span><h3>First Bank</h3><p class="p">FP&amp;A, financial and performance reporting, and product management across banking and SaaS-related businesses.</p><span class="y">6+ years</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <div class="head rv">
+      <div><span class="eyebrow">Selected work</span><h2>Dashboards, agents &amp; <em>workflows</em>.</h2></div>
+      <div class="tabs" role="tablist">
+        <button class="tab on" data-f="all">All<span class="c">16</span></button>
+        <button class="tab" data-f="inv">Investment<span class="c">06</span></button>
+        <button class="tab" data-f="fpa">FP&amp;A<span class="c">10</span></button>
+      </div>
+    </div>
+    <div class="cards" id="cards"></div>
+    <p class="note">Projects use synthetic or fictional company data built for portfolio demonstration. Click any card to view it full size.</p>
+  </div>
+</section>
+
+<section class="approach" id="approach">
+  <div class="ring2"></div>
+  <div class="wrap" style="position:relative">
+    <div class="head rv">
+      <div><span class="eyebrow">Approach</span><h2>From raw data to a <em>decision</em>.</h2></div>
+      <p>Every project follows the same discipline: trust the data, explain the variance, look forward, then recommend.</p>
+    </div>
+    <div class="steps">
+      <div class="step rv"><span class="k">01 / Clean</span><h3>Reconcile first</h3><p>Python pipelines clean and reconcile the data, with documented KPI definitions and automated checks that must pass.</p></div>
+      <div class="step rv"><span class="k">02 / Explain</span><h3>Decompose</h3><p>Variance trees, bridges and heatmaps split every gap into volume, yield, mix, timing and one-offs.</p></div>
+      <div class="step rv"><span class="k">03 / Forecast</span><h3>Look ahead</h3><p>Prophet, moving-average and driver models test base, best and worst cases, backtested against holdout periods.</p></div>
+      <div class="step rv"><span class="k">04 / Decide</span><h3>Recommend</h3><p>Dashboards and AI agents end with a clear call: increase, maintain, monitor or reduce, with controls that flag uncertainty.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap rv">
+    <span class="eyebrow">Contact</span>
+    <h2>Let's make finance <em>faster</em> and smarter.</h2>
+    <p>Open to conversations on finance leadership, investment analytics, AI in finance and board roles.</p>
+    <a class="btn p" href="https://www.linkedin.com/in/seyeolowookere/" target="_blank" rel="noopener">Connect on LinkedIn <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+  </div>
+</section>
+
+<footer><div class="wrap"><span>© 2026 Julius Seye Olowookere, CFA, CPA</span><span>AI Finance Leader · Investment Management · FP&amp;A</span></div></footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true">
+  <div class="lbin" style="position:relative">
+    <div class="lbimg" id="lbimg"></div>
+    <div class="lbside">
+      <span class="eyebrow" id="lbcat"></span>
+      <h3 id="lbt"></h3>
+      <p id="lbd"></p>
+      <div class="tools" id="lbtools"></div>
+      <div class="lbnav">
+        <button class="ib" id="prev" aria-label="Previous"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
+        <button class="ib" id="next" aria-label="Next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        <button class="ib" id="close" aria-label="Close" style="margin-left:auto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const P=[
+ {c:'inv',t:'Executive Investment Performance Dashboard',img:['inv-1-executive-investment-dashboard'],w:1,tools:['HTML dashboard','Power BI rebuild','KPI design'],
+  d:'Rebuilt a Power BI investment dashboard as an interactive HTML decision tool. KPI tiles track AUM, income versus budget, unrealized gains, total return and MOIC, with filters by geography, quarter and asset class. A decision panel explains each variance and suggests next steps. Refreshes from a CSV upload.'},
+ {c:'inv',t:'Value Creation Dashboard',img:['inv-2-value-creation-dashboard'],w:1,tools:['Variance tree','Rate shock','Data reconciliation'],
+  d:'Identifies which asset classes earn below their cost of capital and why. A variance tree splits the gap into volume, yield, realized gains and mix. A 25bp rate shock shows what may happen next, with a recommended action per asset class. Built on cleaned, reconciled data with documented KPI definitions.'},
+ {c:'inv',t:'CIO Copilot Agent',img:['inv-3-cio-copilot-agent'],tools:['AI agent','Controls','Reconciliation'],
+  d:'Custom AI agent for quarterly investment performance reviews. It asks for the period and source files, checks the data is complete, then returns variance analysis, top detractors, exceptions and a reconciliation. Built with explicit controls so it flags uncertain results instead of guessing.'},
+ {c:'inv',t:'Canadian Equity Monitoring Workflow',img:['inv-4b-equity-monitoring-report','inv-4-equity-monitoring-workflow'],tools:['Python','Technical indicators','Audit log'],
+  d:'Monthly Python workflow for a 25-stock TSX portfolio: 12 core holdings and 13 watchlist names. It calculates returns, moving averages, RSI and drawdowns, tests dividend yield and ROE against thresholds, and produces alerts, policy breach flags and rebalancing calls. Every run is logged for audit.'},
+ {c:'inv',t:'Investment Forecast with Scenarios',img:['inv-5-forecast-scenarios'],tools:['Forecasting','Scenario analysis','Backtesting'],
+  d:'Forecasts balance, income and return for each holding through Q1 2027 under base, best and worst cases. Tested on two holdout quarters with a 3.1% median balance error. Each of 78 holdings gets an increase, maintain, monitor or decrease call, and all 12 reconciliation checks pass.'},
+ {c:'inv',t:'CIO Asset Allocation Capstone',w:2,img:['inv-6b-capstone-workflow','inv-6a-cio-asset-allocation-dashboard'],tools:['Python','Prophet','Dashboard','Copilot agent'],
+  d:'End-to-end workflow answering which asset classes to increase, reduce, maintain or watch before year end 2026. Python cleans the data, Prophet and moving-average models forecast income, and a rule flags assets yielding under half their budgeted yield. Results feed an interactive CIO dashboard and a Copilot agent.'},
+ {c:'fpa',t:'ARR Dashboard',img:['fpa-1-full-dashoard'],w:1,tools:['SaaS metrics','Interactive filters','Data checks'],
+  d:'One-page ARR dashboard for Northbeam Software, a fictional B2B SaaS company, built from customer-level data from January 2023 to October 2026. Segment and period filters drive every KPI, chart and comment. It combines an ARR bridge, monthly movements, cohort retention heatmap, retention trend, segment view and data checks.'},
+ {c:'fpa',t:'KPIs and Commentary',img:['fpa-2-kpis-and-commentary'],w:1,tools:['NRR / GRR','Executive commentary'],
+  d:'Closing ARR is $27.96M, up 41.9%, with $8.26M net new ARR. NRR of 98.1% and GRR of 85.6% sit below the 105% and 90% targets. The commentary traces the gap to SMB churn after the April 2026 price increase and recommends a pricing review and an 85% GRR floor.'},
+ {c:'fpa',t:'ARR Bridge and Monthly Movements',img:['fpa-3-arr-bridge-and-monthly-movements'],tools:['Waterfall','Trend analysis'],
+  d:'The waterfall walks ARR from $19.70M to $27.96M over the last 12 months through new logos, expansion, contraction and churn. Beside it, 24 months of gross movements show the trend, with a net new ARR line. Larger churn bars from April 2026 show the SMB price increase taking effect.'},
+ {c:'fpa',t:'OPEX Bridge and Monthly Trend',img:['fpa-4-opex-bridge-and-monthly-trend'],tools:['Budget vs actual','Forecast'],
+  d:'The waterfall walks OPEX from $40.44M budget to $40.63M actual by account, showing the $816K salary underspend offset by $804K of extra contractor cost. The monthly chart compares actual and budget for each month, with November and December forecast shown separately.'},
+ {c:'fpa',t:'Cohort Retention Heatmap',img:['fpa-5-cohort-retention-heatmap'],tools:['Cohort analysis','Heatmap'],
+  d:'Tracks 15 quarterly signup cohorts for up to 14 quarters, showing each cohort’s ARR as a share of its starting ARR. Green cells mean customers are spending more than at signup, red means they are spending less, making weak cohorts such as Q4 2024 easy to spot.'},
+ {c:'fpa',t:'Retention Trend, Segments and Checks',img:['fpa-6-retention-trend-segments-checks'],tools:['Segmentation','Automated checks'],
+  d:'Trailing 12-month NRR and GRR since 2024, next to a segment table comparing SMB, Mid-Market and Enterprise on growth, churn and retention. Enterprise leads at 115% NRR while SMB sits at 77%. Six automated checks confirm the bridge ties every month and segments add to the total.'},
+ {c:'fpa',t:'Variance Heatmap',img:['fpa-7-variance-heatmap'],tools:['Materiality test','Month-end close'],
+  d:'Variance by department and account in one grid. Red cells show overspend, green show underspend, and outlined cells pass the materiality test of 5% and $50K, so the team knows exactly which seven lines need a written explanation before month-end sign-off.'},
+ {c:'fpa',t:'CAPEX Project Tracker',img:['fpa-8-capex-project-tracker'],tools:['EAC tracking','Variance typing'],
+  d:'Tracks eight capital projects against budget, spend to date and estimate at completion. Variances are labelled as timing, moving into 2027, or permanent, changing total cost. The head office fit-out is $282K over budget, and two projects are delayed.'},
+ {c:'fpa',t:'CAPEX Cumulative and Checks',img:['fpa-9-capex-cumulative-and-checks'],w:1,tools:['Phasing','Reconciliation'],
+  d:'Cumulative CAPEX spend against the budget phasing, with spend running $1.10M behind plan to October and a full-year forecast of $8.06M against $9.50M. Five automated checks confirm departments and accounts reconcile, budgets tie to approved totals and every off-track project has a variance type.'},
+ {c:'fpa',t:'13-Week Cash Flow Forecast',img:['fpa-10-13-week-cash-flow-forecast'],w:1,tools:['Direct method','Scenarios','Liquidity policy'],
+  d:'Direct-method 13-week cash flow forecast for a fictional company, built week by week from collections, payroll, suppliers, tax, CAPEX and debt payments. It tests base, downside and upside scenarios against a $3.0M minimum cash policy, models a revolver draw and measures forecast accuracy against actual bank activity.'}
+];
+const lab={inv:'Investment',fpa:'FP&A'};
+const cards=document.getElementById('cards');
+let n={inv:0,fpa:0};
+P.forEach((p,i)=>{
+  p.n=String(++n[p.c]).padStart(2,'0');
+  const el=document.createElement('article');
+  el.className='card rv'+(p.w==2?' full':p.w?' wide':'');el.dataset.c=p.c;el.tabIndex=0;
+  el.innerHTML=`<div class="shot"><img loading="lazy" src="img/${p.img[0]}.jpg" alt="${p.t}"><span class="tag">${lab[p.c]}</span><span class="open"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M8 7h9v9"/></svg></span></div>
+  <div class="body"><span class="num">${lab[p.c]} / ${p.n}</span><h3>${p.t}</h3><p>${p.d.split('. ')[0]}.</p><div class="tools">${p.tools.map(x=>`<span>${x}</span>`).join('')}</div></div>`;
+  el.onclick=()=>openLb(i);el.onkeydown=e=>{if(e.key==='Enter')openLb(i)};
+  cards.appendChild(el);
+});
+// filters
+let filt='all';
+document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('.tab').forEach(x=>x.classList.remove('on'));b.classList.add('on');filt=b.dataset.f;
+  document.querySelectorAll('.card').forEach(c=>{c.classList.toggle('hide',filt!=='all'&&c.dataset.c!==filt);c.classList.add('in')});
+});
+// lightbox
+const lb=document.getElementById('lb');let cur=0;
+function vis(){return P.map((p,i)=>i).filter(i=>filt==='all'||P[i].c===filt)}
+function openLb(i){cur=i;const p=P[i];
+  document.getElementById('lbimg').innerHTML=p.img.map(s=>`<img src="img/${s}.jpg" alt="${p.t}">`).join('');
+  document.getElementById('lbimg').scrollTop=0;
+  document.getElementById('lbcat').textContent=lab[p.c]+' / '+p.n;
+  document.getElementById('lbt').textContent=p.t;
+  document.getElementById('lbd').textContent=p.d;
+  document.getElementById('lbtools').innerHTML=p.tools.map(x=>`<span>${x}</span>`).join('');
+  lb.classList.add('on');document.body.style.overflow='hidden';}
+function closeLb(){lb.classList.remove('on');document.body.style.overflow=''}
+function step(d){const v=vis();let k=v.indexOf(cur);k=(k+d+v.length)%v.length;openLb(v[k])}
+document.getElementById('close').onclick=closeLb;
+document.getElementById('prev').onclick=()=>step(-1);
+document.getElementById('next').onclick=()=>step(1);
+lb.onclick=e=>{if(e.target===lb)closeLb()};
+addEventListener('keydown',e=>{if(!lb.classList.contains('on'))return;if(e.key==='Escape')closeLb();if(e.key==='ArrowRight')step(1);if(e.key==='ArrowLeft')step(-1)});
+// reveal
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach((el,i)=>{el.style.transitionDelay=(el.closest('.cards,.steps,.roles')?(i%3)*90:0)+'ms';io.observe(el)});
+</script>
+</body>
+</html>
